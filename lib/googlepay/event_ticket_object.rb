@@ -1,7 +1,7 @@
 module Googlepay
   class EventTicketObject
 
-    EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/eventTicketObject?'
+    EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/FlightObject?'
 
     def initialize(parameters)
       @parameters = parameters
@@ -16,7 +16,7 @@ module Googlepay
           "typ": 'savetoandroidpay',
           "iat":  Time.now.utc.to_i,
           "payload": {
-              'eventTicketObjects': [@parameters.dup.tap { |h| h.delete(:origin) }]
+              'flightObjects': [@parameters.dup.tap { |h| h.delete(:origin) }]
           },
           'origins': @parameters.fetch(:origin)
       }

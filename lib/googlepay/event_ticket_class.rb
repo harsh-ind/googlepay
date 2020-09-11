@@ -1,7 +1,7 @@
 module Googlepay
   class EventTicketClass
 
-    EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/eventTicketClass'
+    EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/FlightClass'
 
     def initialize(parameters)
       @parameters = parameters
