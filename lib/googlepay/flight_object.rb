@@ -1,5 +1,5 @@
 module Googlepay
-  class EventTicketObject
+  class FlightObject
 
     EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/FlightObject?'
 
@@ -30,6 +30,6 @@ module Googlepay
           :body => event_ticket.to_json,
           :headers => { 'Content-Type' => 'application/json' } )
     end
-  end  
+  end
 
 end

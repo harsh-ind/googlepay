@@ -1,5 +1,5 @@
 module Googlepay
-  class EventTicketClass
+  class FlightClass
 
     EVENT_URL = 'https://www.googleapis.com/walletobjects/v1/FlightClass'
 
@@ -11,7 +11,7 @@ module Googlepay
       result = HTTParty.post("#{EVENT_URL}?access_token=#{Googlepay.token}",
                                :body => @parameters.to_json,
                                :headers => { 'Content-Type' => 'application/json' } )
-      return result if result['error'].nil?
+      return result
       update if result['error']['code'] == 409
     end
 
@@ -19,7 +19,7 @@ module Googlepay
       HTTParty.put("#{EVENT_URL}/#{@parameters[:id]}?access_token=#{Googlepay.token}",
                    :body => @parameters.to_json,
                    :headers => { 'Content-Type' => 'application/json' } )
-    end  
-  end  
+    end
+  end
 
 end
