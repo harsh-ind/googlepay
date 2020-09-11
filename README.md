@@ -1,4 +1,3 @@
-<<<<<<< 14d2aab103a0f7ebad59fc3309ace5adee0a2237
 # googlepay
 =======
 # Googlepay
